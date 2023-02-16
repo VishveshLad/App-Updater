@@ -1,0 +1,74 @@
+{
+  "parameters": {
+    "minor_update_dialog_info": {
+      "defaultValue": {
+        "value": "{\"title\":\"Minor Update\",\"message\":\"These updates usually contain bug fixes, security patches, and small improvements to the application. Minor updates can be downloaded and installed automatically or manually.\",\"positive_btn_text\":\"Update\",\"negative_btn_text\":\"Not Now\",\"hide_positive_btn\":false,\"hide_negative_btn\":false}"
+      },
+      "description": "Minor updates: 3",
+      "valueType": "JSON"
+    },
+    "version_update_dialog_info": {
+      "defaultValue": {
+        "value": "{\"title\":\"Version Update\",\"message\":\"When an application updates from one major version to another (e.g., from version 1.0 to version 2.0), this is known as a version update. Version updates can introduce major changes to the application and may require users to purchase a new license or subscription.\",\"positive_btn_text\":\"Update\",\"negative_btn_text\":\"Not Now\",\"hide_positive_btn\":false,\"hide_negative_btn\":false}"
+      },
+      "description": "Version updates: 1",
+      "valueType": "JSON"
+    },
+    "patch_update_dialog_info": {
+      "defaultValue": {
+        "value": "{\"title\":\"Patch Update\",\"message\":\"These updates are small, targeted fixes for specific issues in the application. Patch updates are often downloaded and installed automatically.\",\"positive_btn_text\":\"Update\",\"negative_btn_text\":\"Not Now\",\"hide_positive_btn\":false,\"hide_negative_btn\":false}"
+      },
+      "description": "Patch updates: 2",
+      "valueType": "JSON"
+    },
+    "ios_version": {
+      "defaultValue": {
+        "value": "1.1"
+      },
+      "valueType": "STRING"
+    },
+    "major_update_dialog_info": {
+      "defaultValue": {
+        "value": "{\"title\":\"Force Update\",\"message\":\"These updates typically introduce significant changes to the application, such as new features or a redesigned user interface. Major updates often require users to download and install a new version of the application.\",\"positive_btn_text\":\"Update\",\"negative_btn_text\":\"Cancel\",\"hide_positive_btn\":false,\"hide_negative_btn\":true}"
+      },
+      "description": "Major updates: 5",
+      "valueType": "JSON"
+    },
+    "hotfix_update_dialog_info": {
+      "defaultValue": {
+        "value": "{\"title\":\"Hotfix Update\",\"message\":\"These updates are similar to patch updates, but they are typically released more urgently to address critical issues or vulnerabilities.\",\"positive_btn_text\":\"Update\",\"negative_btn_text\":\"Cancel\",\"hide_positive_btn\":false,\"hide_negative_btn\":true}"
+      },
+      "description": "Hotfix updates: 4",
+      "valueType": "JSON"
+    },
+    "ios_update_code": {
+      "defaultValue": {
+        "value": "3"
+      },
+      "description": "No Update : 0 Version updates:  1 Patch updates: 2 Minor updates: 3 Hotfix updates: 4 Major updates: 5",
+      "valueType": "STRING"
+    },
+    "android_update_code": {
+      "defaultValue": {
+        "value": "0"
+      },
+      "description": "No Update : 0 Version updates:  1 Patch updates: 2 Minor updates: 3 Hotfix updates: 4 Major updates: 5",
+      "valueType": "NUMBER"
+    },
+    "android_version": {
+      "defaultValue": {
+        "value": "1"
+      },
+      "valueType": "NUMBER"
+    }
+  },
+  "version": {
+    "versionNumber": "31",
+    "updateTime": "2023-02-16T05:07:39.242214Z",
+    "updateUser": {
+      "email": "vishveshl.spaceo@gmail.com"
+    },
+    "updateOrigin": "CONSOLE",
+    "updateType": "INCREMENTAL_UPDATE"
+  }
+}
