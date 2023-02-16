@@ -19,6 +19,7 @@ class AppUpdater: NSObject{
     /// Enter your app id
     private let appUrl = "https://itunes.apple.com/app/id1234567890"
     var isNotNow = false
+    var isAlertControllerPresented = false
     override init() {
         super.init()
         // Remote config for A/B Testing
@@ -82,6 +83,10 @@ class AppUpdater: NSObject{
                     
                     print("Current App Version : ", currentVersion)
                     
+                    guard self.isAlertControllerPresented == false else {
+                        return
+                    }
+                    
                     if updateVersion.compare(currentVersion, options: .numeric) == .orderedDescending && self.isNotNow == false {
                         DispatchQueue.main.async {
                             self.showAlertBasedOnUpdateType(updateType: updateType, objModel: model, updateVersion: updateVersion)
@@ -105,12 +110,14 @@ class AppUpdater: NSObject{
         if objModel.hideNegativeBtn == false {
             let notNowButton = UIAlertAction(title: objModel.negativeBtnText, style: .default){ (action:UIAlertAction) in
                 AppUpdater.shared.isNotNow = true
+                AppUpdater.shared.isAlertControllerPresented = false
             }
             alertController.addAction(notNowButton)
         }
         
         if objModel.hidePositiveBtn == false {
             let updateButton = UIAlertAction(title: objModel.positiveBtnText, style: .default) { (action:UIAlertAction) in
+                AppUpdater.shared.isAlertControllerPresented = false
                 guard let url = URL(string: self.appUrl) else {
                     return
                 }
@@ -129,6 +136,7 @@ class AppUpdater: NSObject{
         }
         
         topVC.present(alertController, animated: true, completion: nil)
+        AppUpdater.shared.isAlertControllerPresented = true
     }
 }
 
